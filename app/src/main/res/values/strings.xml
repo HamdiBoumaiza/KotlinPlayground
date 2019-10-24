@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">KotlinPlayground</string>
     <string name="action_settings">Settings</string>
+
+    <string name="anko_commons">Anko Commons</string>
+    <string name="coroutines">Coroutines!</string>
+    <string name="snackbar">Snackbar</string>
+    <string name="dialog">Dialog</string>
+    <string name="toast">toast</string>
+    <string name="share">share</string>
+    <string name="browse">browse</string>
+    <string name="call">call</string>
+    <string name="sms">SMS</string>
+    <string name="email">email</string>
+    <string name="destructing_declaratives">destructing declaratives</string>
+    <string name="lazy">Lazy lateinit</string>
+    <string name="serialization">serialization</string>
+    <string name="operators">operators</string>
+    <string name="infix">infix</string>
+    <string name="sealed">Sealed</string>
+    <string name="local_functions">Local functions</string>
 </resources>
