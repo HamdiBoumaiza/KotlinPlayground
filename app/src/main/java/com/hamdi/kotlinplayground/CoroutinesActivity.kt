@@ -10,6 +10,7 @@ import kotlinx.coroutines.*
 import kotlinx.coroutines.Dispatchers.IO
 
 class CoroutinesActivity : AppCompatActivity() {
+    private val job = Job()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,9 +18,27 @@ class CoroutinesActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val model = ViewModelProvider(this).get(CoroutinesViewModel::class.java)
-        model.live.observe(this , Observer {
+        model.live.observe(this, Observer {
 
         })
+
+        val scope = CoroutineScope(Dispatchers.Default + job)
+        scope.launch {
+
+        }
+
+
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        job.cancel()
+    }
+
+    private suspend fun testingWith() {
+        withContext(IO) {
+
+        }
     }
 
 
@@ -35,10 +54,10 @@ class CoroutinesActivity : AppCompatActivity() {
             launch { }
         }
 
-        CoroutineScope(IO).launch{
+        CoroutineScope(IO).launch {
         }
 
-        this.lifecycleScope.launch {
+        lifecycleScope.launch {
             // scope bound to Activity Lifecycle
 
         }

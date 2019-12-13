@@ -19,4 +19,5 @@
     <string name="infix">infix</string>
     <string name="sealed">Sealed</string>
     <string name="local_functions">Local functions</string>
+    <string name="compose_ui">Compose ui</string>
 </resources>

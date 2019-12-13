@@ -39,6 +39,7 @@
         <activity android:name=".SerializationActivity" />
         <activity android:name=".InfixFunctionsActivity" />
         <activity android:name=".LocalFunctionsActivity" />
+        <activity android:name=".jetpack_compose.JetpackComposeActivity" />
     </application>
 
 </manifest>

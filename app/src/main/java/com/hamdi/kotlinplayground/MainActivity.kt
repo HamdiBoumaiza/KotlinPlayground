@@ -3,6 +3,7 @@ package com.hamdi.kotlinplayground
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.hamdi.kotlinplayground.jetpack_compose.JetpackComposeActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import org.jetbrains.anko.intentFor
@@ -38,6 +39,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         btn_infix.setOnClickListener(this)
         btn_sealed.setOnClickListener(this)
         btn_local_functions.setOnClickListener(this)
+        btn_compose_ui.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
@@ -56,6 +58,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             btn_infix -> startActivity(intentFor<InfixFunctionsActivity>())
             btn_sealed -> startActivity(intentFor<SealedClassesActivity>())
             btn_local_functions -> startActivity(intentFor<LocalFunctionsActivity>())
+            btn_compose_ui -> startActivity(intentFor<JetpackComposeActivity>())
             else -> toast("No Action yet")
         }
     }
